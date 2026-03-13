@@ -37,7 +37,7 @@ body {
    ============================================ */
 
 .header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #c8cbdc 0%, #7AFF84 100%);
   color: white;
   padding: 2rem 1rem;
   text-align: center;
@@ -68,7 +68,7 @@ body {
 
 .form-container h2 {
   margin-bottom: 1rem;
-  color: #667eea;
+  color: #7AFF84;
 }
 
 .item-form {
@@ -103,7 +103,7 @@ body {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #7AFF84;
 }
 
 .form-actions {
@@ -127,12 +127,12 @@ body {
 }
 
 .btn-primary {
-  background-color: #667eea;
+  background-color: #7AFF84;
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #5568d3;
+  background-color: #7AFF84;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
 }

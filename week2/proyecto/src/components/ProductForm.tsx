@@ -70,7 +70,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ onAdd, onUpdate, editingProdu
 
   return (
     <div className="form-container">
-      <h2>{editingProduct ? "✏️ Editar Producto" : "➕ Agregar Producto"}</h2>
+      <h2>{editingProduct ? "✏️ Editar Producto" : " Agregar Producto"}</h2>
 
       <form onSubmit={handleSubmit} className="product-form">
 
