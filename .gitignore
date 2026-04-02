@@ -1,0 +1,19 @@
+# Node
+node_modules/
+dist/
+build/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Variables de entorno
+.env
+
+# Logs
+*.log
+
+# Sistema
+.DS_Store
+Thumbs.db
