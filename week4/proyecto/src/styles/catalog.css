@@ -1,0 +1,415 @@
+/* ============================================
+   CATÁLOGO DE COSMÉTICOS - ESTILOS COMPLETOS
+   ============================================ */
+
+/* Reset y base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* ============================================
+   CATALOG PRINCIPAL
+   ============================================ */
+.catalog {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.catalog-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #c8cbdc 0%, #7aff84 100%);
+  color: white;
+  border-radius: 12px;
+}
+
+.catalog-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.catalog-header p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ============================================
+   CONTROLES (BÚSQUEDA, FILTROS, ORDEN)
+   ============================================ */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* SearchBar */
+.search-bar {
+  flex: 2;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.clear-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.clear-btn:hover {
+  background: #5a6268;
+}
+
+/* SortSelector */
+.sort-selector {
+  flex: 1;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sort-selector select, .order-btn {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
+
+.order-btn {
+  background: #7aff84;
+  border: none;
+  font-weight: bold;
+}
+
+.order-btn:hover {
+  background: #5ce068;
+}
+
+/* FilterPanel */
+.filter-panel {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.filter-group input, .filter-group select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 120px;
+}
+
+.filter-group.checkbox {
+  gap: 0.25rem;
+}
+
+.clear-filters-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.clear-filters-btn:hover {
+  background: #c82333;
+}
+
+/* Resultados info */
+.results-info {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: right;
+}
+
+/* ============================================
+   ITEM LIST (GRID)
+   ============================================ */
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* ============================================
+   ITEM CARD
+   ============================================ */
+.item-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.sale-badge {
+  background-color: #ff5722;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.card-body p {
+  margin: 0.4rem 0;
+  font-size: 0.9rem;
+}
+
+.out-of-stock {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.in-stock {
+  color: #388e3c;
+}
+
+/* Acciones de tarjeta */
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  justify-content: flex-end;
+}
+
+.btn-details, .btn-delete-card {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-details {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.btn-details:hover {
+  background-color: #138496;
+}
+
+.btn-delete-card {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-delete-card:hover {
+  background-color: #c82333;
+}
+
+/* ============================================
+   LOADING SPINNER
+   ============================================ */
+.loading-spinner {
+  text-align: center;
+  padding: 3rem;
+}
+
+.spinner {
+  border: 4px solid rgba(0,0,0,0.1);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left-color: #7aff84;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   EMPTY STATE
+   ============================================ */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  grid-column: 1 / -1;
+}
+
+.empty-state p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.empty-state .hint {
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 0.5rem;
+}
+
+/* ============================================
+   ERROR HANDLING (SIMULADO)
+   ============================================ */
+.error-simulator {
+  margin-top: 0.75rem;
+}
+
+.btn-simulate-error {
+  background-color: #ffc107;
+  color: #333;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-simulate-error:hover {
+  background-color: #e0a800;
+}
+
+.error-container {
+  text-align: center;
+  padding: 2rem;
+  background: #fff3f3;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 500px;
+  border: 1px solid #ffcdcd;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn-retry {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-retry:hover {
+  background-color: #218838;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .catalog {
+    padding: 0.5rem;
+  }
+  .controls {
+    flex-direction: column;
+  }
+  .filter-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .filter-group {
+    justify-content: space-between;
+  }
+  .filter-group input, .filter-group select {
+    width: auto;
+    flex: 1;
+  }
+  .item-list {
+    grid-template-columns: 1fr;
+  }
+  .card-actions {
+    justify-content: center;
+  }
+  .sort-selector {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalog-header h1 {
+    font-size: 1.5rem;
+  }
+  .search-bar {
+    flex-wrap: wrap;
+  }
+  .clear-btn {
+    width: 100%;
+  }
+}
